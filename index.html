@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<!--
+File: index.html
+GUI Assignment: Homework 3
+Musa Jamshed, UMass Lowell Computer Science, Musa_Jamshed@student.uml.edu
+Last Modified: October 31, 2022
+Description: Interactive Dynamic Multiplication Table
+-->
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Musa's Multiplication Table</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- webpage header -->
+    <header id = "header">
+        <div class="container">
+            <h1>Musa's Multiplication Table</h1>
+        </div>
+    </header>
+    
+    <!-- main area -->
+    <div class="container">
+        <!-- instructions area-->
+        <div>
+            <h1 id="welcome">Welcome!</h1>
+            <h4 id="instructions">Enter the lower and upper bounds for both the horizontal axis and vertical axis of your desired multiplication table. Please note that your values must be between -50 and 50.</h4>
+        </div>
+
+        <!-- form -->
+        <form id="form">
+            <!-- horizontal axis-->
+            <div class="horizontal">
+                <label class="form-label">Horizontal Axis: </label> <br>
+                <input type="number" id="rowStart" class="form-control" placeholder="Enter horizontal start"/> <br>
+                <input type="number" id="rowEnd" class="form-control" placeholder="Enter horizontal end"/> <br>
+            </div>
+            
+            <!-- vertical axis-->
+            <div class="vertical">
+                <label class="form-label">Vertical Axis: </label> <br>
+                <input type="number" id="columnStart" class="form-control" placeholder="Enter vertical start"/> <br>
+                <input type="number" id="columnEnd" class="form-control" placeholder="Enter vertical end"/> <br>
+            </div>
+
+            <!-- submit button-->
+            <input id="submit" type="button" onclick="generateTable()" value="Submit">
+        </form>
+
+        <!-- error message-->
+        <div id="error"></div>
+        
+        <!-- table -->
+        <div id="myTable"></div>
+
+        <script src="js/script.js"></script>
+    </div>
+
+    <!-- footer -->
+    <footer id="footer">
+        <p>Copyright &copy; 2022 Musa Jamshed</p>        
+    </footer>
+
+    
+  </body>
+</html>
